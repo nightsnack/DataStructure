@@ -8,50 +8,52 @@ public class TopoSortA {
 	
 
 	public static boolean TopoSort(LinkedGraph gr, int[] a) {
-		int i,j,k,top,m = 0;
 		int n = gr.vertices();
-		EdgeNode p, b[] =gr.getArray();
-		int[] d = new int [n];
-		for(i = 0; i<n; i++) {
-			d[i]=0;
+		int [] d = new int[n];
+		EdgeNode p;
+		EdgeNode [] b = gr.getArray();
+		
+		for (int i = 0; i < d.length; i++) {
+			d[i] = 0;
 		}
-		for (i = 0; i<n; i++) {
+		
+		for (int i = 0; i < b.length; i++) {
 			p = b[i];
-			while (p!=null) {
-				j = p.adjvex;
+			while(p!=null) {
+				int j = p.adjvex;
 				d[j]++;
 				p = p.next;
 			}
 		}
-		
-		top = -1;
-		for(i = 0; i<n;	i++) {
-			if(d[i]==0)
-			{
+		int top = -1;
+		for (int i = 0; i < d.length; i++) {
+			if(d[i]==0) {
 				d[i] = top;
 				top = i;
 			}
 		}
 		
-		while (top!=-1) {
-			j = top;
+		int m = 0;
+		while(top!=-1) {
+			int j = top;
 			top = d[top];
-			
 			a[m] = j;
 			m++;
+			
 			p = b[j];
-			while (p!=null) {
-				k = p.adjvex;
+			while(p!=null) {
+				int k = p.adjvex;
 				d[k]--;
-				if(d[k] == 0) {
+				if(d[k]==0) {
 					d[k] = top;
 					top = k;
 				}
 				p = p.next;
 			}
 		}
-		if (m<n) {
-			System.out.println("有回路无拓扑序列");
+		if(m<n) 
+		{
+			System.out.println("该图有毒");
 			return false;
 		} else
 		    return true;
