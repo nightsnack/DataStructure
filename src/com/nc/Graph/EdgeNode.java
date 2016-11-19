@@ -2,9 +2,9 @@ package com.nc.Graph;
 
 public class EdgeNode {
 
-	int adjvex;	//adjvex
-	int weight; //weight of edge as for graph
-	EdgeNode next;
+	public int adjvex;	//adjvex
+	public int weight; //weight of edge as for graph
+	public EdgeNode next;
 	/**
 	 * without weight
 	 * @param adjvex

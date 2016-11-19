@@ -234,10 +234,10 @@ public class LinkedGraph implements Graph {
 					if(i<j) System.out.print("("+i+","+j+"),");
 					break;
 				case 1:
-					System.out.print("<"+i+","+j+">,");
+					System.out.print("("+i+","+j+")"+p.weight+",");
 					break;
 				case 2:
-					if (i<j) System.out.print("("+i+","+j+")"+p.weight+",");
+					if (i<j) System.out.print("<"+i+","+j+">,");
 					break;
 				case 3:
 					System.out.print("<"+i+","+j+">"+p.weight+",");
