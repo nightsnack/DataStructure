@@ -36,7 +36,14 @@ public interface List {
 	boolean modify(Object obj,int pos);		//用obj修改线性表中的给定序号pos的元素值
 	boolean isEmpty();		//判断线性表是否为空
 	int size();		//返回线性表的长度
+	/**
+	 * traverse in positive sequence
+	 */
 	void forward();		//正序遍历
+	
+	/**
+	 * traverse in negative sequence
+	 */
 	void backward();	//倒序遍历
 	void clear();
 	List sort();
