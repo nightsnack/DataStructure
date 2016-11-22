@@ -19,7 +19,7 @@ public class SequenceList implements List {
 
 	@Override
 	public Object value(int pos) {
-		if (pos<1 || pos>=len) {
+		if (pos<1 || pos>len) {
 			System.out.println("pos is invalid");
 			return false;
 		}
