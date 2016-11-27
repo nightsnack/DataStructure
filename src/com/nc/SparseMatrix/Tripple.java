@@ -11,6 +11,10 @@ public class Tripple implements Comparable<Object> {
 		this.col = col;
 		this.val = val;
 	}
+	
+	public String toString() {
+		return "("+row+","+col+","+val+")";
+	}
 
 	public boolean equals(Object obj) {
 		Tripple t = (Tripple) obj;
@@ -28,7 +32,7 @@ public class Tripple implements Comparable<Object> {
 		if (this.row>t.row) return 1;
 		else if(this.row<t.row) return -1;
 		else{
-			if (this.row>t.row) return 1;
+			if (this.col>t.col) return 1;
 			else if (this.col<t.col) return -1;
 			else return 0;
 		}

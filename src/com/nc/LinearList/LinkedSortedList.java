@@ -8,7 +8,7 @@ public class LinkedSortedList extends LinkList implements SortedList {
 	
 	public LinkedSortedList(List list) {
 		super();
-		for(int i=1; i<list.size(); i++)
+		for(int i=1; i<=list.size(); i++)
 			this.insert(list.value(i));
 	}
 	
