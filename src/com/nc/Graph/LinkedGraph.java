@@ -119,6 +119,19 @@ public class LinkedGraph implements Graph {
 		else {
 			System.out.println("alerady Exist");
 		}
+		if(type == 0) {
+			a[v1] = new EdgeNode(v2, a[v1]);
+			a[v2] = new EdgeNode(v1, a[v2]);
+		}else if (type == 1) {
+			a[v1] = new EdgeNode(v2, theEdge.weight, a[v1]);
+			a[v2] = new EdgeNode(v1, theEdge.weight, a[v2]);
+		}
+		else if (type == 2) {
+			a[v1] = new EdgeNode(v2, a[v1]);
+		}
+		else
+			a[v1] = new EdgeNode(v2, theEdge.weight, a[v1]);
+		
 		return true;
 	}
 
@@ -141,7 +154,7 @@ public class LinkedGraph implements Graph {
 		}
 		
 		if(q == null)
-			p = p.next;
+			a[i] = a[i].next;
 		else 
 			q.next = p.next;
 		
@@ -152,7 +165,7 @@ public class LinkedGraph implements Graph {
 				q1 = p1;p1 = p1.next;
 			}
 			if (q1 == null)
-				p1 = p1.next;
+				a[j] = a[j].next;
 			else
 				q1.next = p1.next;
 		}
