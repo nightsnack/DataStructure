@@ -209,5 +209,64 @@ public class LinkBinaryTree implements BinaryTree {
 	public void clearBTree() {
 		root = null;
 	}
+	
+	
+//	@Override
+//	public void freeBTree(BTreeNode rt) {
+//		if (rt == null)
+//			return;
+//		if(rt.left!= null) {
+//			freeBTree(rt.left);
+//		}
+//		if (rt.right != null) {
+//			freeBTree(rt.right);
+//		}
+//		if (rt != null) {
+//			rt = null;
+//		}
+//	}
+	
+	public LinkBinaryTree copyTreeDrive() {
+		BTreeNode newroot = copyTree(root);
+		LinkBinaryTree newTree = new LinkBinaryTree(newroot);
+		return newTree;
+	}
+	
+	public BTreeNode copyTree(BTreeNode rt) {
+		
+		BTreeNode nLtree = null;
+		BTreeNode nRtree = null;
+		if (rt == null)
+			return null;
+		if (rt.left != null) {
+			nLtree = copyTree(rt.left);
+		}
+		else 
+			nLtree = null;
+		if (rt.right != null) {
+			nRtree = copyTree(rt.right);
+		}
+		else 
+			nRtree = null;
+		BTreeNode nTree = new BTreeNode(rt.element, nLtree, nRtree);
+		
+		return nTree;
+	}
+	
+	public void exchange () {
+		exchange(root);
+	}
+	
+	private void exchange (BTreeNode rt) {
+		if(rt == null)
+			return;
+		else {
+			exchange(rt.left);
+			exchange(rt.right);
+		}
+		BTreeNode tempTree = rt.left;
+		rt.left = rt.right;
+		rt.right = tempTree;
+	}
 
 }

@@ -23,7 +23,15 @@ public class Execute {
 		System.out.println("深度："+btree.depthBTree());
 		System.out.println("节点数："+btree.countBtree());
 		System.out.println("查找节点："+btree.findBTree('g')+" "+btree.findBTree('G'));
+		
+		BinaryTree newbtree = btree.copyTreeDrive();
+		System.out.println("拷贝后二叉树广义表：");
+		newbtree.printBTree();
+		newbtree.exchange();
+		System.out.println("交换后二叉树广义表：");
+		newbtree.printBTree();
 		btree.clearBTree();
+		newbtree.clearBTree();
 	}
 
 }

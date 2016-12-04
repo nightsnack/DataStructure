@@ -42,6 +42,10 @@ public interface BinaryTree {
 	void printBTree();
 	
 	void clearBTree();
+
+	BinaryTree copyTreeDrive();
+
+	void exchange();
 	
 
 }
