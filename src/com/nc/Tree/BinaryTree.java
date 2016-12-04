@@ -47,5 +47,7 @@ public interface BinaryTree {
 
 	void exchange();
 	
+	public void createHuffmanTree(Integer[] a);
+	
 
 }
