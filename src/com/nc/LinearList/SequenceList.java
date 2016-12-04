@@ -1,5 +1,8 @@
 package com.nc.LinearList;
 
+import com.nc.Stack.SequenceStack;
+import com.nc.Stack.Stack;
+
 public class SequenceList implements List {
 	final int minSize = 10;
 	private Object[] listArray;
@@ -113,6 +116,34 @@ public class SequenceList implements List {
 		len=0;
 		
 	}
+	
+	public void reverse() {
+		Stack stack = new SequenceStack(len);
+		for (int i = 0; i < len; i++) {
+			stack.push(listArray[i]);
+		}
+		for (int i = 0; i < len; i++) {
+			listArray[i] = stack.pop();
+		}
+	}
+	
+	@Override
+	public boolean deleteSpecficObject(Object x) {
+		int i;
+		for (i = 0; i < len; i++) {
+			if (listArray[i].equals(x)) {
+				remove(i+1);
+				break;
+			}
+		}
+		if(i == len)
+		{
+			System.out.println("Not Exist!");
+			return false;
+		}
+		else 
+			return true;
+	}
 
 	@Override
 	public List sort() {
@@ -152,6 +183,12 @@ public class SequenceList implements List {
 		list.modify(33, 4);
 		System.out.println("n1="+n1+" n2="+n2);
 		System.out.println("list length:"+list.size());
+		list.forward();
+		System.out.println("Delete Object 38");
+		list.deleteSpecficObject(38);
+		list.forward();
+		System.out.println("Reverse list:");
+		list.reverse();
 		list.forward();
 		
 		List list1 = list.sort();

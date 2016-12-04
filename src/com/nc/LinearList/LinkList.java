@@ -183,4 +183,19 @@ public class LinkList implements List {
 		System.out.println("list1 length:"+list1.size());
 	}
 
+
+	@Override
+	public void reverse() {
+		// TODO Auto-generated method stub
+		
+	}
+
+
+	@Override
+	public boolean deleteSpecficObject(Object x) {
+		// TODO Auto-generated method stub
+		return true;
+	}
+
+
 }

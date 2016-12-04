@@ -47,4 +47,8 @@ public interface List {
 	void backward();	//倒序遍历
 	void clear();
 	List sort();
+
+	void reverse();
+
+	boolean deleteSpecficObject(Object x);
 }
