@@ -1,8 +1,9 @@
 package com.nc.Tree;
 
 public class BTreeNode {
-	Object element;
-	BTreeNode left,right;
+	public Object element;
+	public BTreeNode left;
+	public BTreeNode right;
 	
 	public BTreeNode(Object element) {
 		this.element = element;

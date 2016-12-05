@@ -1,4 +1,4 @@
-package com.nc.Tree;
+package com.nc.HuffmanTree;
 
 public class ExecuteHaffmanTree {
 	public static void main (String[] args) {

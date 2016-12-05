@@ -1,4 +1,6 @@
-package com.nc.Tree;
+package com.nc.HuffmanTree;
+
+import com.nc.Tree.BTreeNode;
 
 public class HuffmanTreeNode extends BTreeNode{
 	Object element;

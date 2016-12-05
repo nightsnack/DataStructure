@@ -1,4 +1,4 @@
-package com.nc.Tree;
+package com.nc.HuffmanTree;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
@@ -8,6 +8,9 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
+
+import com.nc.Tree.BTreeNode;
+import com.nc.Tree.LinkBinaryTree;
 
 public class HuffmanTree extends LinkBinaryTree {
 	
