@@ -8,6 +8,10 @@ import java.util.Stack;
 //邻接矩阵
 public class AdjacencyGraph implements Graph {
 	final static int Maxvalue = 1000;
+	public static int getMaxvalue() {
+		return Maxvalue;
+	}
+
 	private int n;  //顶点数
 	private int e; //边数
 	private int type;  //类型0123

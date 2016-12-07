@@ -11,18 +11,18 @@ public class Execute {
 			dd[i] = new EdgeElement(a[i][0], a[i][1],a[i][2]);
 		}
 		if (ga.createGraph(dd)) {
-			System.out.println("建立成功");
+			System.out.println("Create Successful!");
 		} else {
-			System.out.println("建立失败");
+			System.out.println("Create Failed!");
 			System.exit(1);
 		}
-		System.out.println("输出顶点集和边集：");
+		System.out.println("Output the vertex set and edge set:");
 		ga.output();
-		System.out.println("从初始点0开始按照深度优先搜索得到的序列：");
+		System.out.println("DepthFirstSearch from start vertex 0: ");
 		ga.depthFirstSearch(0);
-		System.out.println("从初始点0开始按照广度优先搜索得到的序列：");
+		System.out.println("bredthFirstSearch from start vertex 0: ");
 		ga.breadthFirstSearch(0);
-		System.out.println("顶点0的度入度出度");
+		System.out.println("Degree  inDegree  outDegree of the Point 0");
 		System.out.println(ga.degree(0)+" "+ga.inDegree(0)+" "+ga.outDegree(0));
 		if (ga.putEdge(new EdgeElement(4, 1, 5)))
 			System.out.println("Enter <4,1>5 successfully!");
