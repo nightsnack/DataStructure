@@ -100,14 +100,15 @@ public class SequenceList implements List {
 	public void forward() {
 		// TODO Auto-generated method stub
 		for (int i = 0; i < len; i++) {
-			System.out.println(listArray[i].toString());
+			System.out.print(listArray[i].toString()+" ");
 		}
+		System.out.println();
 	}
 
 	@Override
 	public void backward() {
 		for (int i = len-1; i >= 0; i--) {
-			System.out.println(listArray[i].toString());
+			System.out.print(listArray[i].toString()+" ");
 		}
 	}
 

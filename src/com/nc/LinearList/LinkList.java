@@ -107,9 +107,10 @@ public class LinkList implements List {
 	public void forward() {
 		Node p = head.next;
 		while (p!=head) {
-			System.out.println(p.element.toString());
+			System.out.print(p.element.toString()+" ");
 			p = p.next;
 		}
+		System.out.println();
 	}
 
 	@Override
@@ -118,15 +119,15 @@ public class LinkList implements List {
 		
 		Node p = head.next;
 		while (p!=head) {
-			System.out.println(p.element.toString());
 			julist.add(p.element);
 			p = p.next;
 		}
 		Collections.reverse(julist);
 		Iterator<Object> itr = julist.iterator();
 		while (itr.hasNext()) {
-			System.out.println(itr.next());
+			System.out.print(itr.next()+" ");
 		}
+		System.out.println();
 	}
 
 	@Override
