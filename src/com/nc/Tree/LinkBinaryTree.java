@@ -269,10 +269,4 @@ public class LinkBinaryTree implements BinaryTree {
 		rt.right = tempTree;
 	}
 
-	@Override
-	public void createHuffmanTree(Integer[] a) {
-		// TODO Auto-generated method stub
-		
-	}
-
 }

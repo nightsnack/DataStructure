@@ -137,7 +137,7 @@ public class HuffmanTree extends LinkBinaryTree {
             while ((tempString = reader.readLine()) != null) {
                 char[] code = tempString.toCharArray();
                 int weight = decode(code);
-                System.out.println("节点 "+wcmap.get(weight)+" 权值 "+weight+" 编码 "+tempString);
+                System.out.println("编码 "+tempString+" 节点 "+wcmap.get(weight)+" 权值 "+weight);
                 
             }
             reader.close();

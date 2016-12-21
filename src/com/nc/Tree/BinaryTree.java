@@ -15,7 +15,7 @@ public interface BinaryTree {
 	boolean isEmpty();
 	
 	/**
-	 * 按照所给的字符串顺序遍历二叉树
+	 * 按照所给的字符串顺序遍历二叉树,包含层次遍历（递归非递归）先序、中序、后续遍历
 	 * @param s
 	 */
 	void traverseBTree(String s);
@@ -39,15 +39,25 @@ public interface BinaryTree {
 	 */
 	int countBtree();
 	
+	/**
+	 * 按照广义表的方式打印二叉树
+	 */
 	void printBTree();
 	
+	/**
+	 * 清除二叉树
+	 */
 	void clearBTree();
 
+	/**
+	 * 递归复制
+	 * @return 返回复制后的新树
+	 */
 	BinaryTree copyTreeDrive();
 
+	/**
+	 * 交换左右子树
+	 */
 	void exchange();
 	
-	public void createHuffmanTree(Integer[] a);
-	
-
 }
